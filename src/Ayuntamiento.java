@@ -1,9 +1,9 @@
 
 public class Ayuntamiento {
 	
-	String calle;
-	String alcalde;
-	String ubicacion;
+	private String calle;
+	private String alcalde;
+	private String ubicacion;
 
 	public Ayuntamiento(String nombre, int edad, String dni){
 		this.calle = calle;

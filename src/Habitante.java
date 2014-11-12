@@ -1,12 +1,14 @@
 
 public class Habitante {
 	
-	String nombre;
-	int edad = 0;
-	String dni;
+	private String nombre;
+	private String apellido;
+	private int edad = 0;
+	private String dni;
 
-	public Habitante(String nombre, int edad, String dni){
+	public Habitante(String nombre, String apellido, int edad, String dni){
 		this.nombre = nombre;
+		this.apellido = apellido;
 		this.edad = edad;
 		this.dni = dni;
 	}
@@ -15,6 +17,12 @@ public class Habitante {
 		return nombre;
 	}
 	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
+	public String getApellido(){
+		return nombre;
+	}
+	public void setApellido(String apellido){
 		this.nombre = nombre;
 	}
 	public int getEdad(){
