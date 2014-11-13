@@ -1,16 +1,26 @@
 
 public class Inmueble {
 	
+	private String pueblo;
 	private String calle;
 	private int numero = 0;
-	private String tamaño;
+	private int tamaño = 0;
+	private int precio= 0;
 
-	public Inmueble(String nombre, int edad, String dni){
+	public Inmueble(String pueblo, String calle, int numero, int tamaño, int precio){
+		this.pueblo = pueblo;
 		this.calle = calle;
-		this.numero = numero
+		this.numero = numero;
 		this.tamaño = tamaño;
+		this.precio = precio;
 	}
 
+	public String getPueblo(){
+		return pueblo;
+	}
+	public void setPueblo(String pueblo){
+		this.pueblo = pueblo;
+	}
 	public String getCalle(){
 		return calle;
 	}
@@ -23,13 +33,17 @@ public class Inmueble {
 	public void setNumero(int numero){
 		this.numero = numero;
 	}
-	public String getTamaño(){
+	public int getTamaño(){
 		return tamaño;
 	}
-	public void setTamaño(String tamaño){
+	public void setTamaño(int tamaño){
 		this.tamaño = tamaño;
-	
-			
+	}
+	public int getPrecio(){
+		return precio;
+	}
+	public void setPrecio(int precio){
+		this.precio = precio;
 	}
 	
 	

@@ -2,13 +2,16 @@
 public class Ayuntamiento {
 	
 	private String calle;
-	private String alcalde;
-	private String ubicacion;
+	private String pueblo;
+	private String alcaldeNombre;
+	private String alcaldeApellido;
+	
 
-	public Ayuntamiento(String nombre, int edad, String dni){
+	public Ayuntamiento(String calle, String pueblo, String alcaldeNombre, String alcaldeApellido){
 		this.calle = calle;
-		this.alcalde = alcalde
-		this.ubicacion = ubicacion;
+		this.alcaldeNombre = alcaldeNombre;
+		this.alcaldeApellido = alcaldeApellido;
+		this.pueblo = pueblo;
 	}
 
 	public String getCalle(){
@@ -17,20 +20,22 @@ public class Ayuntamiento {
 	public void setCalle(String calle){
 		this.calle = calle;
 	}
-	public int getAlcalde(){
-		return alcalde;
+	public String getPueblo(){
+		return pueblo;
 	}
-	public void setAlcalde(int alcalde){
-		this.alcalde = alcalde;
+	public void setPueblo(String pueblo){
+		this.pueblo = pueblo;
 	}
-	public String geUbicacion(){
-		return ubicacion;
+	public String getAlcaldeNombre(){
+		return alcaldeNombre;
 	}
-	public void setUbicacion(String ubicacion){
-		this.ubicacion = ubicacion;
-	
-			
+	public void setAlcaldeNombre(String alcaldeNombre){
+		this.alcaldeNombre = alcaldeNombre;
 	}
-	
-	
+	public String getAlcaldeApellido(){
+		return alcaldeApellido;
+	}
+	public void setAlcaldeApellido(String alcaldeApellido){
+		this.alcaldeApellido = alcaldeApellido;
+	}
 }				

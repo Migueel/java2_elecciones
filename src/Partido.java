@@ -1,26 +1,34 @@
 public class Partido {
 	
-	private String presidente;
-	private int socios = 0;
+	private String presidenteNombre;
+	private String presidenteApellido;
+	private int afiliados = 0;
 	private String sede;
 
-	public Partido(String nombre, int edad, String dni){
-		this.presidente = presidente;
-		this.socios = socios
+	public Partido(String presidenteNombre, String presidenteApellido, int afiliados, String sede){
+		this.presidenteNombre = presidenteNombre;
+		this.presidenteApellido = presidenteApellido;
+		this.afiliados = afiliados;
 		this.sede = sede;
 	}
 
-	public String getPresidente(){
-		return presidente;
+	public String getPresidenteNombre(){
+		return presidenteNombre;
 	}
-	public void setPresidente(String presidente){
-		this.presidente = presidente;
+	public void setPresidenteNombre(String presidenteNombre){
+		this.presidenteNombre = presidenteNombre;
 	}
-	public int getSocios(){
-		return socios;
+	public String getPresidenteApellido(){
+		return presidenteApellido;
 	}
-	public void setSocios(int socios){
-		this.socios = socios;
+	public void setPresidenteApellido(String presidenteApellido){
+		this.presidenteApellido = presidenteApellido;
+	}
+	public int getAfiliados(){
+		return afiliados;
+	}
+	public void setAfiliados(int afiliados){
+		this.afiliados = afiliados;
 	}
 	public String getSede(){
 		return sede;

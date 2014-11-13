@@ -4,9 +4,9 @@ public class EspacioPublico {
 	private int tamaño = 0;
 	private int capacidad = 0;
 
-	public EspacioPublico(String nombre, int edad, String dni){
+	public EspacioPublico(String ubicacion, int tamaño, int capacidad){
 		this.ubicacion = ubicacion;
-		this.tamaño = tamaño
+		this.tamaño = tamaño;
 		this.capacidad = capacidad;
 	}
 
@@ -22,10 +22,10 @@ public class EspacioPublico {
 	public void setTamaño(int tamaño){
 		this.tamaño = tamaño;
 	}
-	public String getCapacidad(){
+	public int getCapacidad(){
 		return capacidad;
 	}
-	public void setCapacidad(String capacidad){
+	public void setCapacidad(int capacidad){
 		this.capacidad = capacidad;
 	
 			

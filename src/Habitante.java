@@ -20,10 +20,10 @@ public class Habitante {
 		this.nombre = nombre;
 	}
 	public String getApellido(){
-		return nombre;
+		return apellido;
 	}
 	public void setApellido(String apellido){
-		this.nombre = nombre;
+		this.apellido = apellido;
 	}
 	public int getEdad(){
 		return edad;
@@ -38,15 +38,5 @@ public class Habitante {
 		this.dni = dni;
 	}
 	
-	public boolean puedeVotar(){
-		
-		if (this.edad>=18) {
-			return true;
-			
-		}
-		else {
-			return false;
-		}
-
-	}
+	
 }				
