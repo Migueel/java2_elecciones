@@ -1,29 +1,29 @@
 
 public class Habitante {
 	
-	private String nombre;
-	private String apellido;
+	private String habitanteNombre;
+	private String habitanteApellido;
 	private int edad = 0;
 	private String dni;
 
-	public Habitante(String nombre, String apellido, int edad, String dni){
-		this.nombre = nombre;
-		this.apellido = apellido;
+	public Habitante(String habitanteNombre, String habitanteApellido, int edad, String dni){
+		this.habitanteNombre = habitanteNombre;
+		this.habitanteApellido = habitanteApellido;
 		this.edad = edad;
 		this.dni = dni;
 	}
 
-	public String getNombre(){
-		return nombre;
+	public String getHabitanteNombre(){
+		return habitanteNombre;
 	}
-	public void setNombre(String nombre){
-		this.nombre = nombre;
+	public void setHabitanteNombre(String habitanteNombre){
+		this.habitanteNombre = habitanteNombre;
 	}
-	public String getApellido(){
-		return apellido;
+	public String getHabitanteApellido(){
+		return habitanteApellido;
 	}
-	public void setApellido(String apellido){
-		this.apellido = apellido;
+	public void setHabitanteApellido(String habitanteApellido){
+		this.habitanteApellido = habitanteApellido;
 	}
 	public int getEdad(){
 		return edad;
