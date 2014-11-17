@@ -1,7 +1,6 @@
 
 import java.util.*;
 import java.io.*;
-import java.lang.*;
 
 public class Elecciones {
 
@@ -25,8 +24,8 @@ public class Elecciones {
 		String habitanteApellido = null;
 		int edad = 0;
 		String dni = null;
-			
-		Habitante habitante = new Habitante(habitanteNombre, habitanteApellido, edad, dni);
+
+	    Habitante habitante = new Habitante(habitanteNombre, habitanteApellido, edad, dni);
 		
 		System.out.println("Nombre del habitante: ");
 		habitanteNombre = sc.next();
@@ -48,13 +47,7 @@ public class Elecciones {
 		
 		habitante.setDni(dni);
 
-		/*
-		System.out.println( "DATOS DEL HABITANTE");
-		System.out.println( "Nombre: " + habitante.getHabitanteNombre());
-		System.out.println( "Apellido: " + habitante.getHabitanteApellido());
-		System.out.println( "Edad: " + habitante.getEdad());
-		System.out.println( "DNI: " + habitante.getDni());
-		*/
+		
 
 		//}
 
@@ -91,12 +84,7 @@ public class Elecciones {
 		
 		ayuntamiento.setAlcaldeApellido(alcaldeApellido);
 
-		/*
-		System.out.println( "DATOS DEL AYUNTAMIENTO DE " + ayuntamiento.getPueblo());
-		System.out.println( "Pueblo: " + ayuntamiento.getPueblo());
-		System.out.println( "Calle: " + ayuntamiento.getCalle());
-		System.out.println( "Alcalde: " + ayuntamiento.getAlcaldeNombre() +" " + ayuntamiento.getAlcaldeApellido());
-		*/
+		
 
 		//}
 
@@ -139,13 +127,7 @@ public class Elecciones {
 
 		inmueble.setPrecio(precio);
 
-		/*
-		System.out.println( "DATOS DEL INMUEBLE");
-		System.out.println( "Pueblo: " + inmueble.getPueblo());
-		System.out.println( "Direccion: " + inmueble.getCalle() + ", nº " + inmueble.getNumero());
-		System.out.println( "Tamaño: " + inmueble.getTamaño() + " m2");
-		System.out.println( "Precio: " + inmueble.getPrecio() + "€");
-		*/
+		
 
 	//	}
 
@@ -176,12 +158,7 @@ public class Elecciones {
 		
 		espacio.setCapacidad(capacidad);
 
-		/*
-		System.out.println( "DATOS DEL ESPACIO PUBLICO");
-		System.out.println( "Ubicacion: " + espacio.getUbicacion());
-		System.out.println( "Tamaño: " + espacio.getTamaño() + " m2");
-		System.out.println( "Capacidad: " + espacio.getCapacidad());
-		*/
+		
 			
 	//	}
 
@@ -218,49 +195,97 @@ public class Elecciones {
 		
 		partido.setSede(sede);
 
-		/*
-		System.out.println( "DATOS DEL PARTIDO POLITICO");
-		System.out.println( "Presidente: " + partido.getPresidenteNombre() +" " + partido.getPresidenteApellido());
-		System.out.println( "Afiliados: " + partido.getAfiliados());
-		System.out.println( "Sede: " + partido.getSede());
-		*/
+		
 
 	//	}
 
 	String nombreFichero = "listadosPartidos.txt";
 	String ruta = "/home/zubiri/ProyectosJava/java2_elecciones/src";
 	String salida;
-	int i = 0;
+	
 	
 	try {
 	
-		File archivo = new File(ruta, nombreFichero);
+		/*File archivo = new File(ruta, nombreFichero);
 		
 		FileReader leer = new FileReader (archivo);
 		
 		BufferedReader bf = new BufferedReader (leer);
 		salida = bf.readLine();
 		
-		List<String> aList= new ArrayList<String>(Arrays.asList(salida.split(" ")));
-		System.out.println("Estos son los partidos que hay disponibles");
+		List<String> aList = new ArrayList<String>(Arrays.asList(salida.split(",")));
+		System.out.println("Estos son los partidos que hay disponibles: ");
 		
-		ArrayList <String> lista=new ArrayList <String>();
+		ArrayList <String> lista = new ArrayList <String>();
 		String fila=bf.readLine();
-		
-		while (fila!=null) {
-			lista.add(fila);
-			fila=bf.readLine();
-		}
+		 
 	
 		for(int r=0;r<aList.size();r++){
-			System.out.println("○ " + aList.get(r));
+			System.out.println("- " + aList.get(r));
 		}
 	}
 	catch (FileNotFoundException e){
 		System.out.println(e.getMessage());
 	}
-	
+		*/
+	File listaPartidos = new File("/home/zubiri/Proyectos_java/java2_elecciones/src/listaPartidos.txt");
+	FileInputStream fis = new FileInputStream(listaPartidos);
+	InputStreamReader isr = new InputStreamReader(fis);
+	BufferedReader br = new BufferedReader(isr);
 
+	ArrayList<Partido> partidosCompletos = new ArrayList<Partido>();
+	String linea;
+	linea = br.readLine();
+
+	while(linea!=null){
+		String [] campos = linea.split(",");
+		Partido partidos = new Partido();
+		
+		partidos.setNombrePartido(campos[0]);
+		
+		int num = Integer.parseInt(campos[1]);
+		partidos.setNumafiliados(num);
+		partidos.setPosicionideologica(campos[2]);
+		partidos.setNomenclatura(campos[3]);
+		partidosCompletos.add(partidos);
+		linea = br.readLine();
+}
+for (int j = 0; j < partidosCompletos.size(); j++) 
+	partidosCompletos[j] 
+}
+/*
+//HABITANTE
+	System.out.println( "DATOS DEL HABITANTE");
+	System.out.println( "Nombre: " + habitante.getHabitanteNombre());
+	System.out.println( "Apellido: " + habitante.getHabitanteApellido());
+	System.out.println( "Edad: " + habitante.getEdad());
+	System.out.println( "DNI: " + habitante.getDni());
+	
+//AYUNTAMIENTO
+	System.out.println( "DATOS DEL AYUNTAMIENTO DE " + ayuntamiento.getPueblo());
+	System.out.println( "Pueblo: " + ayuntamiento.getPueblo());
+	System.out.println( "Calle: " + ayuntamiento.getCalle());
+	System.out.println( "Alcalde: " + ayuntamiento.getAlcaldeNombre() +" " + ayuntamiento.getAlcaldeApellido());
+	
+//INMUEBLE
+	System.out.println( "DATOS DEL INMUEBLE");
+	System.out.println( "Pueblo: " + inmueble.getPueblo());
+	System.out.println( "Direccion: " + inmueble.getCalle() + ", nº " + inmueble.getNumero());
+	System.out.println( "Tamaño: " + inmueble.getTamaño() + " m2");
+	System.out.println( "Precio: " + inmueble.getPrecio() + "€");
+	
+//ESPACIO PUBLICO
+	System.out.println( "DATOS DEL ESPACIO PUBLICO");
+	System.out.println( "Ubicacion: " + espacio.getUbicacion());
+	System.out.println( "Tamaño: " + espacio.getTamaño() + " m2");
+	System.out.println( "Capacidad: " + espacio.getCapacidad());
+	
+//PARTIDO POLITICO
+	System.out.println( "DATOS DEL PARTIDO POLITICO");
+	System.out.println( "Presidente: " + partido.getPresidenteNombre() +" " + partido.getPresidenteApellido());
+	System.out.println( "Afiliados: " + partido.getAfiliados());
+	System.out.println( "Sede: " + partido.getSede());
+*/
 }
 }
 
