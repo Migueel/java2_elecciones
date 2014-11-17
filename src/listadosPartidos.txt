@@ -1,4 +1,4 @@
-partido1,presidente1, afiliados1,sede1 
-partido2,presidente2,sede2
-partido3 
-partido4
+partido1,presidentenombre1 presidenteapellido1,afiliados1,sede1 
+partido2,presidentenombre2 presidenteapellido2,afiliados2,sede2
+partido3,presidentenobmre3 presidenteapellido3,afiliados,3sede3
+partido4,presidentenombre4 presidenteapellido4,afiliados4,sede4

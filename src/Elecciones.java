@@ -168,13 +168,19 @@ public class Elecciones {
 		System.out.println("Introduce los siguientes datos del partido:");
 		System.out.println(" ");
 
+		String nombrePartido = null;
 		String presidenteNombre = null;
 		String presidenteApellido= null;
 		int afiliados = 0;
 		String sede = null;
 			
-		Partido partido = new Partido(presidenteNombre, presidenteApellido, afiliados, sede);
+		Partido partido = new Partido(nombrePartido, presidenteNombre, presidenteApellido, afiliados, sede);
 		
+		System.out.println("Nombre del partido politico");
+		nombrePartido = sc.next();
+
+		partido.setNombrePartido(nombrePartido);
+
 		System.out.println("Nombre del presidente del partido: ");
 		presidenteNombre = sc.next();
 		
@@ -204,9 +210,9 @@ public class Elecciones {
 	String salida;
 	
 	
-	try {
+	/*try {
 	
-		/*File archivo = new File(ruta, nombreFichero);
+		File archivo = new File(ruta, nombreFichero);
 		
 		FileReader leer = new FileReader (archivo);
 		
@@ -242,17 +248,16 @@ public class Elecciones {
 		Partido partidos = new Partido();
 		
 		partidos.setNombrePartido(campos[0]);
-		
-		int num = Integer.parseInt(campos[1]);
-		partidos.setNumafiliados(num);
-		partidos.setPosicionideologica(campos[2]);
-		partidos.setNomenclatura(campos[3]);
+		partidos.setPresidente(campos[1]);
+		int num = Integer.parseInt(campos[2]);
+		partidos.setNumeroAfiliados(num);
+		partidos.setSede(campos[3]);
 		partidosCompletos.add(partidos);
 		linea = br.readLine();
-}
-for (int j = 0; j < partidosCompletos.size(); j++) 
-	partidosCompletos[j] 
-}
+	}
+	for (int j = 0; j < partidosCompletos.size(); j++) 
+	partidosCompletos[j];
+	}
 /*
 //HABITANTE
 	System.out.println( "DATOS DEL HABITANTE");
@@ -288,6 +293,8 @@ for (int j = 0; j < partidosCompletos.size(); j++)
 */
 }
 }
+
+
 
 
 		
